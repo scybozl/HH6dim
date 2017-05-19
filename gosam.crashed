@@ -1,0 +1,160 @@
+---#[ COMMAND LINE ARGUMENTS:
+'ggHH_UFO.rc'
+---#] COMMAND LINE ARGUMENTS:
+---#[ MESSAGES:
+GoSam 2.0.4
+Writing template file '/tmp/tmpfKkIuw.gosam.in'
+Processing 'ggHH_UFO.rc'
+Configuration file is not sound:
+GoSam Configuration Error: The directory '/home/iwsatlas1/scyboz/Work/HHPersonal/virtualUFOtest' contains files created by '/home/iwsatlas1/scyboz/Work/HHPersonal/ggHHtest.rc', which does no longer exist.
+If you actually want to overwrite these files you need to remove the file '.golem.dir' in that directory.
+---#] MESSAGES:
+---#[ LAST WORDS:
+GoSam terminated due to an error
+---#] LAST WORDS:
+---#[ STACK:
+[  0]   File "/home/iwsatlas1/scyboz/Work/local/bin/gosam.py", line 142, in <module>
+    main.main(argv)
+[  1]   File "/home/iwsatlas1/scyboz/Work/local/lib/python2.7/site-packages/golem/app/main.py", line 231, in main
+    golem.util.tools.error("Configuration file is not sound:", str(err))
+[  2]   File "/home/iwsatlas1/scyboz/Work/local/lib/python2.7/site-packages/golem/util/tools.py", line 81, in error
+    sys.exit("GoSam terminated due to an error")
+---#] STACK:
+---#[ CONFIG:
+PSP_chk_th2=3
+PSP_chk_th3=5
+PSP_chk_th1=8
+fc.bin=${HOME}/Work/GCC-6.2.0/bin/gfortran
+golem95.ldflags=-L${HOME}/Work/local/lib -lgolem
+form.bin=${HOME}/Work/Herwig/bin/tform
+PSP_chk_kfactor=1000
+group=True
+reduction_interoperation=-1
++installed.extensions=golem95, samurai, ninja
++gosam-contrib_libql.fcflags=-I/home/iwsatlas1/scyboz/Work/local/include/gosam-contrib
+PSP_chk_method=Automatic
+process_path=/home/iwsatlas1/scyboz/Work/HHPersonal/virtualUFOtest
++z0099.extensions=gosam-contrib_libff
+renorm_yukawa=True
++z0094.extensions=gosam-contrib_libolo
+gosam-contrib_libql.fcflags=-I/home/iwsatlas1/scyboz/Work/local/include/gosam-contrib
+gosam-contrib_libolo.fcflags=-I/home/iwsatlas1/scyboz/Work/local/include/gosam-contrib
+qgraf.verbatim=true=iprop[part1,part2,part3,part4,part5,0,0];
+debug=nlo
+installed.extensions=golem95, samurai, ninja
+model.options=ewchoose
+qgraf.options=onshell,notadpole,nosnail
+diagsum=True
+zero=mdlWT
+z0005.extensions=gosam-contrib_fc
+z0095.extensions=gosam-contrib_libql
+renorm_decoupling=True
+polvec=numerical
+formopt.level=2
+out=h,h
+golem95.fcflags=-I${HOME}/Work/local/include/gosam-contrib
+qcdloop.ldflags=-L${HOME}/Work/local/lib -lqcdloop
+renorm_mqse=True
+samurai.ldflags=-L${HOME}/Work/local/lib -lsamurai
+ninja.fcflags=-I${HOME}/Work/local/include/gosam-contrib
++gosam-contrib_libff.fcflags=-I/home/iwsatlas1/scyboz/Work/local/include/gosam-contrib
+PSP_check=True
+renorm_beta=False
+avh_olo.ldflags=-L${HOME}/Work/local/lib -lavh_olo
+r2=explicit
+gosam-contrib_libff.ldflags=-L/home/iwsatlas1/scyboz/Work/local/lib -lff
+gosam-contrib_libolo.ldflags=-L/home/iwsatlas1/scyboz/Work/local/lib -lavh_olo
+qgraf.bin=${HOME}/Work/Herwig/bin/qgraf
+abbrev.level=diagram
+python.bin=python
++gosam-contrib_fc.fcflags=-g -O2 -ffree-line-length-none
+gosam-contrib_fc.fcflags=-g -O2 -ffree-line-length-none
+gosam-contrib_libql.ldflags=-L/home/iwsatlas1/scyboz/Work/local/lib -lqcdloop
+renorm_logs=True
++z0095.extensions=gosam-contrib_libql
++gosam-contrib_libql.ldflags=-L/home/iwsatlas1/scyboz/Work/local/lib -lqcdloop
++z0005.extensions=gosam-contrib_fc
+samurai.version=2.9.0
++zzz.extensions=avh_olo, qcdloop
+z0099.extensions=gosam-contrib_libff
+regularisation_scheme=dred
+PSP_chk_li1=16
+PSP_chk_li3=6
+PSP_chk_li2=7
+PSP_chk_li4=19
+gosam-contrib_libff.fcflags=-I/home/iwsatlas1/scyboz/Work/local/include/gosam-contrib
++gosam-contrib_libff.ldflags=-L/home/iwsatlas1/scyboz/Work/local/lib -lff
+golem.full-name=GoSam 2.0.4
+abbrev.color=form
+golem.version=2.0.4
+PSP_rescue=True
++qcdloop.ldflags=-L${HOME}/Work/local/lib -lqcdloop
+golem.revision=12f4de9
+in=g,g
+reduction_programs=ninja
+z0094.extensions=gosam-contrib_libolo
+zzz.extensions=avh_olo, qcdloop
+renorm_gamma5=True
+ninja.ldflags=-L${HOME}/Work/local/lib -lninja
+reduction_interoperation_rescue=-1
+pyxodraw=True
++gosam-contrib_libolo.ldflags=-L/home/iwsatlas1/scyboz/Work/local/lib -lavh_olo
+setup-file=/home/iwsatlas1/scyboz/Work/HHPersonal/ggHH_UFO.rc
+abbrev.limit=500
++avh_olo.ldflags=-L${HOME}/Work/local/lib -lavh_olo
+haggies.bin=/usr/bin/java -jar ${HOME}/Work/local/share/golem/haggies/haggies.jar
+process_name=gghh
+form.threads=2
+renorm_mqwf=True
++gosam-contrib_libolo.fcflags=-I/home/iwsatlas1/scyboz/Work/local/include/gosam-contrib
+form.tempdir=/tmp
+gosam-auto-reduction.extensions=ninja
+golem.name=GoSam
+samurai.fcflags=-I${HOME}/Work/local/include/gosam-contrib
+samurai_scalar=2
+form.workspace=1000
+model=FeynRules,models/HEFT6dim_UFO
+order=QED,2,2
+---#] CONFIG:
+---#[ ENABLED EXTENSIONS:
+---#] ENABLED EXTENSIONS:
+---#[ Platform:
+Platform
+ *        machine: x86_64
+ *         maxint: 64
+ *        maxsize: 64
+ *     maxunicode: 1114111
+ *  platform_long: Linux-3.13.0-98-generic-x86_64-with-Ubuntu-14.04-trusty
+ * platform_short: linux2
+ *      processor: x86_64
+ *        version: #145-Ubuntu SMP Sat Oct 8 20:13:07 UTC 2016
+---#] Platform:
+---#[ Linux:
+Linux
+ * distribution: Ubuntu 14.04 (trusty)
+ *         libc: glibc 2.4
+---#] Linux:
+---#[ Python:
+Python
+ *         branch: 
+ *     build_date: Oct 26 2016 20:30:19
+ *       compiler: GCC 4.8.4
+ *     hexversion: 0x020706f0
+ * implementation: CPython
+ *       revision: 
+ *        version: 2.7.6
+---#] Python:
+---#[ XML Parser (Expat):
+XML Parser (Expat)
+ *        encoding: UTF-8
+ * returns_unicode: True
+ *         version: 2.1.0
+---#] XML Parser (Expat):
+---#[ GoSam:
+GoSam
+ *     author: The GoSam (Golem and Samurai) Collaboration <gosam@hepforge.org>
+ * maintainer: The GoSam Collaboration <gosam@hepforge.org>
+ *   revision: 12f4de9
+ *        url: http://projects.hepforge.org/gosam/
+ *    version: 2.0.4
+---#] GoSam:

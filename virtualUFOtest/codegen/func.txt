@@ -1,0 +1,189 @@
+
+
+mdlloop = 16*pi^2;
+
+mdlMh = mdlfloat5;
+
+mdlG = 2*sqrt(mdlaS)*sqrt(pi);
+
+mdlGC7 = i_*mdlG;
+
+mdlGC6 = -mdlG;
+
+mdlGC8 = i_*mdlG^2;
+
+mdlCKM2x3 = 0;
+
+mdlCKM2x2 = 1;
+
+mdlCKM2x1 = 0;
+
+mdlCKM1x1 = 1;
+
+mdlCKM1x2 = 0;
+
+mdlCKM1x3 = 0;
+
+Nfrat = if(Nfgen,Nf/Nfgen,1);
+
+mdlCKM3x2 = 0;
+
+mdlCKM3x3 = 1;
+
+mdlCKM3x1 = 0;
+
+mdlaEW = 1/mdlaEWM1;
+
+mdlee = 2*sqrt(mdlaEW)*sqrt(pi);
+
+mdlGC4 = mdlee*i_;
+
+mdlMW = sqrt(mdlMZ^2/mdlfloat1+sqrt(mdlMZ^4/mdlfloat2-mdlaEW*pi*mdlMZ^2/(mdlGf*sqrt(2))));
+
+mdlGC5 = mdlee^2*i_;
+
+mdlGC3 = (-mdlee)*i_;
+
+mdlGC2 = 2*mdlee*i_/mdlfloat4;
+
+mdlGC1 = (-mdlee)*i_/mdlfloat4;
+
+mdlsw2 = 1-mdlMW^2/mdlMZ^2;
+
+mdlsw = sqrt(mdlsw2);
+
+mdlGC53 = mdlee*i_*complexconjugate(mdlCKM3x2)/(mdlsw*sqrt(2));
+
+mdlGC52 = mdlee*i_*complexconjugate(mdlCKM3x1)/(mdlsw*sqrt(2));
+
+mdlGC51 = mdlee*i_*complexconjugate(mdlCKM2x3)/(mdlsw*sqrt(2));
+
+mdlGC50 = mdlee*i_*complexconjugate(mdlCKM2x2)/(mdlsw*sqrt(2));
+
+mdlGC54 = mdlee*i_*complexconjugate(mdlCKM3x3)/(mdlsw*sqrt(2));
+
+mdlGC48 = mdlee*i_*complexconjugate(mdlCKM1x3)/(mdlsw*sqrt(2));
+
+mdlGC49 = mdlee*i_*complexconjugate(mdlCKM2x1)/(mdlsw*sqrt(2));
+
+mdlGC46 = mdlee*i_*complexconjugate(mdlCKM1x1)/(mdlsw*sqrt(2));
+
+mdlGC47 = mdlee*i_*complexconjugate(mdlCKM1x2)/(mdlsw*sqrt(2));
+
+mdlv = 2*mdlMW*mdlsw/mdlee;
+
+mdlyyt = mdlymt/mdlv;
+
+mdlyyb = mdlymb/mdlv;
+
+mdlGC40 = (-mdlcg)*i_*mdlG^4/(pi^2*mdlv);
+
+mdlGC44 = (-mdlct)*i_*mdlyyt;
+
+mdlGC45 = (-mdlctt)*i_*mdlyyt/mdlv;
+
+mdlyytau = mdlymtau/mdlv;
+
+mdlGC17 = mdlCKM2x1*mdlee*i_/(mdlsw*sqrt(2));
+
+mdlGC16 = mdlCKM1x3*mdlee*i_/(mdlsw*sqrt(2));
+
+mdlGC15 = mdlCKM1x2*mdlee*i_/(mdlsw*sqrt(2));
+
+mdlGC14 = mdlCKM1x1*mdlee*i_/(mdlsw*sqrt(2));
+
+mdlGC13 = mdlee*i_/(mdlsw*sqrt(2));
+
+mdlGC11 = (-mdlee^2)*i_/mdlsw^2;
+
+mdlGC19 = mdlCKM2x3*mdlee*i_/(mdlsw*sqrt(2));
+
+mdlGC18 = mdlCKM2x2*mdlee*i_/(mdlsw*sqrt(2));
+
+mdlcw = sqrt(1-mdlsw2);
+
+mdlGC12 = mdlcw^2*mdlee^2*i_/mdlsw^2;
+
+mdlGC24 = (-2)*mdlcw*mdlee^2*i_/mdlsw;
+
+mdlgw = mdlee/mdlsw;
+
+mdlGC31 = mdlcw*mdlee*i_/(mdlfloat1*mdlsw)+mdlee*i_*mdlsw/(mdlfloat1*mdlcw);
+
+mdlGC30 = (-mdlcw)*mdlee*i_/(mdlfloat1*mdlsw)+mdlee*i_*mdlsw/(mdlfloat1*mdlcw);
+
+mdlnormh4 = mdlMh^2/(mdlfloat6*mdlv^2);
+
+mdlGC10 = (-24)*i_*mdlnormh4;
+
+mdlnormh3 = 3*mdlMh^2/mdlv;
+
+mdlGC9 = (-mdlc3)*i_*mdlnormh3;
+
+mdlGC39 = mdlcg*mdlG^3/(pi^2*mdlv);
+
+mdlGC38 = mdlcg*i_*mdlG^2/(pi^2*mdlv);
+
+mdlZERO = mdlfloat7;
+
+mdlg1 = mdlee/mdlcw;
+
+mdlmtch = 1+11*mdlaS/(mdlfloat2*pi);
+
+mdlGC41 = mdlct*i_*mdlG^2*mdlmtch/(mdlfloat3*pi^2*mdlv);
+
+mdlGC42 = mdlct*mdlG^3*mdlmtch/(mdlfloat3*pi^2*mdlv);
+
+mdlGC43 = (-mdlct)*i_*mdlG^4*mdlmtch/(mdlfloat3*pi^2*mdlv);
+
+mdlGC33 = mdlcgg*mdlG^3/(pi^2*mdlv^2)+mdlctt*mdlG^3*mdlmtch/(mdlfloat3*pi^2*mdlv^2);
+
+mdlGC34 = (-mdlcgg)*i_*mdlG^4/(pi^2*mdlv^2)-mdlctt*i_*mdlG^4*mdlmtch/(mdlfloat3*pi^2*mdlv^2);
+
+mdlGC32 = mdlcgg*i_*mdlG^2/(pi^2*mdlv^2)+mdlctt*i_*mdlG^2*mdlmtch/(mdlfloat3*pi^2*mdlv^2);
+
+mdlGC35 = (-mdlct^2)*i_*mdlG^2*mdlmtch/(mdlfloat3*pi^2*mdlv^2);
+
+mdlGC37 = mdlct^2*i_*mdlG^4*mdlmtch/(mdlfloat3*pi^2*mdlv^2);
+
+mdlGC36 = (-mdlct^2)*mdlG^3*mdlmtch/(mdlfloat3*pi^2*mdlv^2);
+
+mdlGC28 = (-mdlcw)*mdlee*i_/(mdlfloat1*mdlsw)-mdlee*i_*mdlsw/(mdlfloat8*mdlcw);
+
+mdlGC29 = mdlcw*mdlee*i_/(mdlfloat1*mdlsw)-mdlee*i_*mdlsw/(mdlfloat8*mdlcw);
+
+mdlGC26 = (-2)*mdlee*i_*mdlsw/(mdlfloat4*mdlcw);
+
+mdlGC27 = mdlee*i_*mdlsw/mdlcw;
+
+mdlvev = 2*mdlMW*mdlsw/mdlee;
+
+mdlydo = mdlymdo*sqrt(2)/mdlvev;
+
+mdlytau = mdlymtau*sqrt(2)/mdlvev;
+
+mdlyup = mdlymup*sqrt(2)/mdlvev;
+
+mdlye = mdlyme*sqrt(2)/mdlvev;
+
+mdlyc = mdlymc*sqrt(2)/mdlvev;
+
+mdlyb = mdlymb*sqrt(2)/mdlvev;
+
+mdlym = mdlymm*sqrt(2)/mdlvev;
+
+mdlyt = mdlymt*sqrt(2)/mdlvev;
+
+mdlys = mdlyms*sqrt(2)/mdlvev;
+
+mdlGC25 = mdlee*i_*mdlsw/(mdlfloat4*mdlcw);
+
+mdlGC22 = mdlCKM3x3*mdlee*i_/(mdlsw*sqrt(2));
+
+mdlGC23 = mdlcw*mdlee*i_/mdlsw;
+
+mdlGC20 = mdlCKM3x1*mdlee*i_/(mdlsw*sqrt(2));
+
+mdlGC21 = mdlCKM3x2*mdlee*i_/(mdlsw*sqrt(2));
+
+

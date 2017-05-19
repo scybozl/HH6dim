@@ -1,15 +1,15 @@
 process_name=gghh
-process_path=virtualEWChl
+process_path=virtualUFOtest
 
 # PDG codes # Gluon: 21 # Higgs-Boson: 25
 in=g,g
 out=h,h
 
-order=QL,1,0
-#order=QCD,none,2
+# order=QL,1,0
+order=QED,2,2
 
 #model = smdiag
-model=FeynRules, models/EWChL_UFO
+model=FeynRules, models/HEFT6dim_UFO
 
 renorm_beta=false
 
