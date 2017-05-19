@@ -1,0 +1,27 @@
+process_name=gghh
+process_path=virtualEWChl
+
+# PDG codes # Gluon: 21 # Higgs-Boson: 25
+in=g,g
+out=h,h
+
+order=QL,1,0
+#order=QCD,none,2
+
+#model = smdiag
+model=FeynRules, ../model/EWChL_UFO
+
+renorm_beta=false
+
+#model.options= Nfgen:1
+
+zero=mdlWT
+
+# one quark flavour [t] running in the loops:
+qgraf.verbatim=true=iprop[part1,part2,part3,part4,part5,0,0];
+
+#symmetries=family,generation
+reduction_programs=ninja
+#polvec=explicit
+#r2=explicit
+debug=nlo

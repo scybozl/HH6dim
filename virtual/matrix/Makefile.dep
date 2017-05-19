@@ -1,0 +1,7 @@
+
+OBJEXT ?=o
+OBJEXTG=$(OBJEXT)
+# Module Dependencies:
+gghh_smehc_test.mod: test.$(OBJEXTG)
+gghh_smehc_matrix.mod: matrix.$(OBJEXTG)
+test.$(OBJEXT): matrix.$(OBJEXT)

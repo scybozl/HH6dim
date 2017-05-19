@@ -1,0 +1,259 @@
+
+
+gW = 1/sqrt2/sw;
+
+gHHH = (-3)/2/sw*mH*mH/mW;
+
+gPB = mBMS/mW/sqrt2/sw;
+
+gAPP = -1;
+
+gGWX = (-i_)*mW/2/sw;
+
+gH = 1/(24*pi*pi*mW*sw);
+
+gPmu = mmu/mW/sqrt2/sw;
+
+gGWH = (-mW)/2/sw;
+
+gWWXX = 1/2/sw/sw;
+
+gHHPP = (-mH)*mH/mW/mW/(4*sw*sw);
+
+ef = e;
+
+gHXX = (-1)/2/sw*mH*mH/mW;
+
+gWWPP = 1/2/sw/sw;
+
+gWAPX = (-i_)/2/sw;
+
+gHWW = mW/sw;
+
+gPtau = mtauMS/mW/sqrt2/sw;
+
+gHPP = (-1)/2/sw*mH*mH/mW;
+
+gHB = (-mBMS)/mW/2/sw;
+
+gWWAA = -1;
+
+alphaf = alpha;
+
+gAAPP = 2;
+
+gHtau = (-mtauMS)/mW/2/sw;
+
+gXmu = (-mmu)/mW*((-1)/2)/sw;
+
+gHHHH = (-3)/(4*sw*sw)*mH*mH/mW/mW;
+
+Nfrat = if(Nfgen,Nf/Nfgen,1);
+
+cw = mW/mZ;
+
+gWWZZ = -cw^2/sw^2;
+
+gWWZ = -cw/sw;
+
+gHZZ = mW/(cw^2*sw);
+
+gZZPP = ((cw*cw-sw*sw)/cw/sw)^2/2;
+
+gZZHH = 1/2/cw/cw/sw/sw;
+
+gGZWP = mW/(2*cw*sw);
+
+gGZH = (-mW)/(2*cw*cw*sw);
+
+gWWAZ = cw/sw;
+
+gZ = 1/cw/sw;
+
+gUa = gZ*(1/4);
+
+gBa = (-gZ)*(1/4);
+
+gtauv = (-gZ)*(1/4-sw^2);
+
+gUv = gZ*(1/4-2/3*sw^2);
+
+gUl = gUv+gUa;
+
+gUr = gUv-gUa;
+
+gtaua = (-gZ)*(1/4);
+
+gtaur = gtauv-gtaua;
+
+gtaul = gtauv+gtaua;
+
+gntauv = gZ*(1/4);
+
+gntaua = gZ*(1/4);
+
+gntaur = gntauv-gntaua;
+
+gntaul = gntauv+gntaua;
+
+gCa = gZ*(1/4);
+
+gev = (-gZ)*(1/4-sw^2);
+
+gea = (-gZ)*(1/4);
+
+ger = gev-gea;
+
+gCv = gZ*(1/4-2/3*sw^2);
+
+gCl = gCv+gCa;
+
+gCr = gCv-gCa;
+
+gel = gev+gea;
+
+gBv = (-gZ)*(1/4-1/3*sw^2);
+
+gBr = gBv-gBa;
+
+gBl = gBv+gBa;
+
+gDv = (-gZ)*(1/4-1/3*sw^2);
+
+gDa = (-gZ)*(1/4);
+
+gDr = gDv-gDa;
+
+gDl = gDv+gDa;
+
+gTa = gZ*(1/4);
+
+gTv = gZ*(1/4-2/3*sw^2);
+
+gTl = gTv+gTa;
+
+gTr = gTv-gTa;
+
+gGWZP = (-cw*cw-sw*sw)/(2*cw*sw)*mW;
+
+gnmua = gZ*(1/4);
+
+NA = NC*NC-1;
+
+gXC = (-mC)/mW*(1/2)/sw;
+
+gnev = gZ*(1/4);
+
+swf = sw;
+
+gnmuv = gZ*(1/4);
+
+gnmul = gnmuv+gnmua;
+
+mZf = mZ;
+
+gZXH = (-i_)/2/cw/sw;
+
+gnmur = gnmuv-gnmua;
+
+gHmu = (-mmu)/mW/2/sw;
+
+gXT = (-mT)/mW*(1/2)/sw;
+
+gPPPP = (-2)*mH*mH/mW/mW/(4*sw*sw);
+
+gnea = gZ*(1/4);
+
+gner = gnev-gnea;
+
+gnel = gnev+gnea;
+
+gXtau = (-mtauMS)/mW*((-1)/2)/sw;
+
+gWWHH = 1/2/sw/sw;
+
+gWWWW = 1/sw^2;
+
+gWZPH = (-1)/2/cw;
+
+gXU = (-mU)/mW*(1/2)/sw;
+
+gWZPX = (-i_)/2/cw;
+
+gHHXX = (-mH)*mH/mW/mW/(4*sw*sw);
+
+gXD = (-mD)/mW*((-1)/2)/sw;
+
+gmuv = (-gZ)*(1/4-sw^2);
+
+gXB = (-mBMS)/mW*((-1)/2)/sw;
+
+gSv = (-gZ)*(1/4-1/3*sw^2);
+
+gSa = (-gZ)*(1/4);
+
+gSr = gSv-gSa;
+
+gHe = (-me)/mW/2/sw;
+
+gmua = (-gZ)*(1/4);
+
+gmur = gmuv-gmua;
+
+mWf = mW;
+
+gXS = (-mS)/mW*((-1)/2)/sw;
+
+gSl = gSv+gSa;
+
+gmul = gmuv+gmua;
+
+gHT = (-mT)/mW/2/sw;
+
+gHU = (-mU)/mW/2/sw;
+
+gHS = (-mS)/mW/2/sw;
+
+gPWA = -mW;
+
+gHD = (-mD)/mW/2/sw;
+
+gZZXX = 1/2/cw/cw/sw/sw;
+
+gPWZ = (-mW)*sw/cw;
+
+gHC = (-mC)/mW/2/sw;
+
+gZPP = (cw*cw-sw*sw)/(2*sw*cw);
+
+gXe = (-me)/mW*((-1)/2)/sw;
+
+gPe = me/mW/sqrt2/sw;
+
+gWAPH = (-1)/2/sw;
+
+gXXXX = (-3)/(4*sw*sw)*mH*mH/mW/mW;
+
+gAH = 47/(144*pi*pi*mW*sw)*(1-2/987*(mH/mT)^4-14/705*(mH/mT)^2+213/26346320*(mH/mW)^12+5/119756*(mH/mW)^10+41/180950*(mH/mW)^8+87/65800*(mH/mW)^6+57/6580*(mH/mW)^4+33/470*(mH/mW)^2);
+
+GFf = GF;
+
+gPD = mD/mW/sqrt2/sw;
+
+gWPH = (-1)/2/sw;
+
+gPC = mC/mW/sqrt2/sw;
+
+gXXPP = (-mH)*mH/mW/mW/(4*sw*sw);
+
+gAZPP = (-cw*cw-sw*sw)/cw/sw;
+
+gPT = mT/mW/sqrt2/sw;
+
+gPU = mU/mW/sqrt2/sw;
+
+gWPX = (-i_)/2/sw;
+
+gPS = mS/mW/sqrt2/sw;
+
+
