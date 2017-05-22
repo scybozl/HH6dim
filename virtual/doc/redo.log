@@ -7,7 +7,7 @@
 # generation, please consult the file common/version.f90.
 #
 #
-# 2017-05-18 13:57:11.201133
+# 2017-05-22 14:24:17.439254
 # golem.full-name=GoSam 2.0.4
 # golem.name=GoSam
 # golem.version=2.0.4
@@ -355,8 +355,7 @@ reduction_programs=ninja
 #    customspin2prop --- replace the propagator of spin-2 particles
 #                        with a custom function (read the manual for this).
 #    
-### Default:
-# extensions=
+extensions=autotools
 
 ### debug (comma separated list)
 #    A list of debug flags.
@@ -432,16 +431,14 @@ debug=nlo
 # 
 #    See also: filter.nlo, select.lo, select.nlo
 #    
-### Default:
-# filter.lo=
+filter.lo=lambda d: d.vertices(g,g,H) < 2
 
 ### filter.nlo (text)
 #    A python function which provides a filter for loop diagrams.
 # 
 #    See filter.lo for more explanation.
 #    
-### Default:
-# filter.nlo=
+filter.nlo=lambda d: (d.vertices(g,g,g,g,H) + d.vertices(g,g,g,H) + d.vertices(g,g,H)) < 2
 
 ### filter.module (text)
 #    A python file of predefined functions which should be available

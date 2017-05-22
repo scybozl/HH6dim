@@ -1,45 +1,13 @@
 #!/bin/sh
+prefix=/usr/local
+exec_prefix=${prefix}
 
-if command -v realpath >/dev/null 2>&1 ; then
-   PWD="$(dirname $(realpath "$0"))"
-else
-   PWD="$(dirname "$0")"
-fi
+FC=gfortran
+LDFLAGS="  	-L/home/iwsatlas1/scyboz/Work/local/lib -lavh_olo 	-L/home/iwsatlas1/scyboz/Work/local/lib -lff 	-L/home/iwsatlas1/scyboz/Work/local/lib -lavh_olo 	-L/home/iwsatlas1/scyboz/Work/local/lib -lqcdloop 	-L/home/iwsatlas1/scyboz/Work/local/lib -lninja 	-L/home/iwsatlas1/scyboz/Work/local/lib -lqcdloop"
+CFLAGS="  	-g -O2 -ffree-line-length-none 	-I/home/iwsatlas1/scyboz/Work/local/include/gosam-contrib 	-I/home/iwsatlas1/scyboz/Work/local/include/gosam-contrib 	-I/home/iwsatlas1/scyboz/Work/local/include/gosam-contrib 	-I/home/iwsatlas1/scyboz/Work/local/include/gosam-contrib"
 
-
-MAKEFILECONF=$PWD/Makefile.conf
-
-FC="$(sed -n 'H
-   ${
-   g
-   s/\\[ \t]*\n[ \t]*//g
-   p
-   }' $MAKEFILECONF|\
-   grep '^[ \t]*FC[ \t?]*='|sed 's/^[ \t]*FC[ \t?]*=//')"
-LDFLAGS="$(sed -n 'H
-   ${
-   g
-   s/\\[ \t]*\n[ \t]*//g
-   p
-   }' $MAKEFILECONF|\
-   grep '^[ \t]*LDFLAGS[ \t?]*='|sed 's/^[ \t]*LDFLAGS[ \t?]*=//')"
-CFLAGS="$(sed -n 'H
-   ${
-   g
-   s/\\[ \t]*\n[ \t]*//g
-   p
-   }' $MAKEFILECONF|\
-   grep '^[ \t]*FCFLAGS[ \t?]*='|sed 's/^[ \t]*FCFLAGS[ \t?]*=//')"
-
-
-PROCESS_LDFLAGS="$PWD/matrix/matrix.a \
-$PWD/helicity0/amplitude0.a \
-$PWD/common/common.a"
-
-
-PROCESS_CFLAGS="-I$PWD/matrix \
--I$PWD/helicity0 \
--I$PWD/common"
+PROCESS_LDFLAGS=" -L${exec_prefix}/lib -lgolem_process_gghh"
+PROCESS_CFLAGS=" -I${prefix}/include/gosam_process-gghh"
 
 while [ $# -gt 0 ]; do
    case "$1" in
@@ -60,9 +28,6 @@ while [ $# -gt 0 ]; do
    ;;
       -ocflags)
               printf " $CFLAGS"
-   ;;
-      -deps)
-              printf " $PROCESS_LDFLAGS"
    ;;
       -name)
               printf " gghh"
@@ -92,7 +57,6 @@ while [ $# -gt 0 ]; do
               echo "            does not include dependencies"
               echo "   -ocflags prints the compilation flags pointing to"
               echo "            include paths of dependencies"
-              echo "   -deps    prints the paths to the files used by -libs"
               echo "   -fortcom the name of the fortran compiler in use"
               echo "   -name    prints the process name"
               echo "   -help    prints this screen"

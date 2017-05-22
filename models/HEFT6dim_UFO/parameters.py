@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.27
 # Mathematica version: 10.4.1 for Linux x86 (64-bit) (April 11, 2016)
-# Date: Fri 19 May 2017 13:17:11
+# Date: Mon 22 May 2017 16:03:07
 
 
 
@@ -367,17 +367,17 @@ mtch = Parameter(name = 'mtch',
                  value = '1 + (11*aS)/(4.*cmath.pi)',
                  texname = 'K_m')
 
-cgghh = Parameter(name = 'cgghh',
-                  nature = 'internal',
-                  type = 'real',
-                  value = 'cgg + ((-ct**2 + ctt)*match)/12.',
-                  texname = '\\text{cgghh}')
-
 Mh = Parameter(name = 'Mh',
                nature = 'internal',
                type = 'real',
                value = '125.',
                texname = '\\text{Mh}')
+
+MW = Parameter(name = 'MW',
+               nature = 'internal',
+               type = 'real',
+               value = 'cmath.sqrt(MZ**2/2. + cmath.sqrt(MZ**4/4. - (aEW*cmath.pi*MZ**2)/(Gf*cmath.sqrt(2))))',
+               texname = 'M_W')
 
 cggh = Parameter(name = 'cggh',
                  nature = 'internal',
@@ -385,11 +385,11 @@ cggh = Parameter(name = 'cggh',
                  value = 'cg + (ct*mtch)/12.',
                  texname = '\\text{cggh}')
 
-MW = Parameter(name = 'MW',
-               nature = 'internal',
-               type = 'real',
-               value = 'cmath.sqrt(MZ**2/2. + cmath.sqrt(MZ**4/4. - (aEW*cmath.pi*MZ**2)/(Gf*cmath.sqrt(2))))',
-               texname = 'M_W')
+cgghh = Parameter(name = 'cgghh',
+                  nature = 'internal',
+                  type = 'real',
+                  value = 'cgg + ((-ct**2 + ctt)*mtch)/12.',
+                  texname = '\\text{cgghh}')
 
 ee = Parameter(name = 'ee',
                nature = 'internal',

@@ -1,6 +1,6 @@
 
 OBJEXT ?=o
-OBJEXTG=$(OBJEXT)
+OBJEXTG=lo
 # Module Dependencies:
 accu.$(OBJEXTG): config.$(OBJEXTG)
 model.$(OBJEXTG): config.$(OBJEXTG)

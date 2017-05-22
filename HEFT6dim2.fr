@@ -162,7 +162,7 @@ M$Parameters = {
 
   cgghh == {
 	ParameterType	 -> Internal,
-	Value		 -> cgg + (ctt - ct^2)/12 * match,
+	Value		 -> cgg + (ctt - ct^2)/12 * mtch,
 	InteractionOrder -> {QL,1},
 	Description	 -> "Effective ggHH coupling"},
 

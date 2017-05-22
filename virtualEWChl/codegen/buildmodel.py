@@ -34,7 +34,7 @@ modelfile = open('model.f90', 'w')
 outdict=translatefile(options.input,config)
 # Write model.f90 file
 modelfile.write('module     gghh_model\n')
-modelfile.write('   ! Model parameters for the model: FeynRules,EWChL_UFO\n')
+modelfile.write('   ! Model parameters for the model: FeynRules,models/EWChL_UFO\n')
 modelfile.write('   use gghh_config, only: ki')
 modelfile.write(', &\n')
 modelfile.write('   & renormalisation, reduction_interoperation, &\n')

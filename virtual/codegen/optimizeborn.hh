@@ -2,13 +2,11 @@
 #Create <born.txt>
 #Create <born.dat>
 
-Symbol diag1,...,diag3;
+Symbol diag1,...,diag1;
 
 ExtraSymbols,vector,abb;
 
-Local diagrams=diag1
-  +diag2
-  +diag3;
+Local diagrams=diag1;
 
 #Call borndiag
 Format O2,stats=off;

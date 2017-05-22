@@ -5,13 +5,15 @@ process_path=virtualUFOtest
 in=g,g
 out=h,h
 
-order=QL,1,1
-#order=QED,2, 2
+#order=QCD,2,2
+order=QL,1,0
+#order=QED,NONE,2
 
 #model = smdiag
 model=FeynRules, models/HEFT6dim_UFO
 
 renorm_beta=false
+extensions=autotools
 
 #model.options= Nfgen:1
 
@@ -19,6 +21,7 @@ zero=mdlWT
 
 # one quark flavour [t] running in the loops:
 # qgraf.verbatim=true=iprop[part1,part2,part3,part4,part5,0,0];
+qgraf.verbatim=true=chord[part5000000,0,0];
 
 #symmetries=family,generation
 reduction_programs=ninja

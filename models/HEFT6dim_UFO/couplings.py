@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.27
 # Mathematica version: 10.4.1 for Linux x86 (64-bit) (April 11, 2016)
-# Date: Fri 19 May 2017 13:17:12
+# Date: Mon 22 May 2017 16:03:08
 
 
 from object_library import all_couplings, Coupling
@@ -135,27 +135,27 @@ GC_31 = Coupling(name = 'GC_31',
 
 GC_32 = Coupling(name = 'GC_32',
                  value = '(cgghh*complex(0,1)*G**2)/(cmath.pi**2*v**2)',
-                 order = {'QCD':2})
+                 order = {'QCD':2,'QL':1})
 
 GC_33 = Coupling(name = 'GC_33',
                  value = '(cgghh*G**3)/(cmath.pi**2*v**2)',
-                 order = {'QCD':3})
+                 order = {'QCD':3,'QL':1})
 
 GC_34 = Coupling(name = 'GC_34',
                  value = '-((cgghh*complex(0,1)*G**4)/(cmath.pi**2*v**2))',
-                 order = {'QCD':4})
+                 order = {'QCD':4,'QL':1})
 
 GC_35 = Coupling(name = 'GC_35',
                  value = '(cggh*complex(0,1)*G**2)/(cmath.pi**2*v)',
-                 order = {'QCD':2})
+                 order = {'QCD':2,'QL':1})
 
 GC_36 = Coupling(name = 'GC_36',
                  value = '(cggh*G**3)/(cmath.pi**2*v)',
-                 order = {'QCD':3})
+                 order = {'QCD':3,'QL':1})
 
 GC_37 = Coupling(name = 'GC_37',
                  value = '-((cggh*complex(0,1)*G**4)/(cmath.pi**2*v))',
-                 order = {'QCD':4})
+                 order = {'QCD':4,'QL':1})
 
 GC_38 = Coupling(name = 'GC_38',
                  value = '-(ct*complex(0,1)*yyt)',

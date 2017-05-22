@@ -6,7 +6,7 @@ in=g,g
 out=h,h
 
 #order=QCD,2,4
-order=QED,2,2
+#order=QED,2,2
 
 model=smdiagehc
 
@@ -25,10 +25,11 @@ reduction_programs=ninja
 #polvec=explicit
 #r2=explicit
 debug=nlo
+extensions=autotools
 
 # filter.lo removes tree diagrams with two effective couplings as they should not be interfered with the loop disagrams; 
 # they are calculated in ggHH_tree_ehc
-# filter.lo= lambda d: d.vertices(g,g,H) < 2 
+filter.lo= lambda d: d.vertices(g,g,H) < 2 
 
 # filter.nlo removes diagrams with gs power higher than gs^4
-# filter.nlo= lambda d: (d.vertices(g,g,g,g,H) + d.vertices(g,g,g,H) + d.vertices(g,g,H)) < 2 
+filter.nlo= lambda d: (d.vertices(g,g,g,g,H) + d.vertices(g,g,g,H) + d.vertices(g,g,H)) < 2 

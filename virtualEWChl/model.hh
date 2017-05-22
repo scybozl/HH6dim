@@ -1,7 +1,7 @@
 * vim: syntax=form:ts=3:sw=3
 
 * This file has been generated from the FeynRule model files
-* in /home/iwsatlas1/scyboz/Work/HHPersonal/EWChL_UFO
+* in /home/iwsatlas1/scyboz/Work/HHPersonal/models/EWChL_UFO
 
 *---#[ Symbol Definitions:
 *---#[ Fields:

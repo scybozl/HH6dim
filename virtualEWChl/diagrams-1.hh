@@ -23,7 +23,7 @@
 
 *--#[ diagram1:
 *
-Local diagram1 =
+Id diag1 =
   QGRAFSIGN(-1) * PREFACTOR(1) *
    inp([field.part21], k1) *
    inplorentz(+2, iv1r1L2, k1, 0) *
@@ -60,7 +60,7 @@ Local diagram1 =
 *--#] diagram1:
 *--#[ diagram2:
 *
-Local diagram2 =
+Id diag2 =
   QGRAFSIGN(+1) * PREFACTOR(1) *
    inp([field.part21], k1) *
    inplorentz(+2, iv1r3L2, k1, 0) *
@@ -97,7 +97,7 @@ Local diagram2 =
 *--#] diagram2:
 *--#[ diagram3:
 *
-Local diagram3 =
+Id diag3 =
   QGRAFSIGN(+1) * PREFACTOR(1) *
    inp([field.part21], k1) *
    inplorentz(+2, iv1r3L2, k1, 0) *
@@ -134,7 +134,7 @@ Local diagram3 =
 *--#] diagram3:
 *--#[ diagram4:
 *
-Local diagram4 =
+Id diag4 =
   QGRAFSIGN(-1) * PREFACTOR(1) *
    inp([field.part21], k1) *
    inplorentz(+2, iv1r1L2, k1, 0) *
@@ -176,7 +176,7 @@ Local diagram4 =
 *--#] diagram4:
 *--#[ diagram5:
 *
-Local diagram5 =
+Id diag5 =
   QGRAFSIGN(+1) * PREFACTOR(1) *
    inp([field.part21], k1) *
    inplorentz(+2, iv1r1L2, k1, 0) *
@@ -218,7 +218,7 @@ Local diagram5 =
 *--#] diagram5:
 *--#[ diagram6:
 *
-Local diagram6 =
+Id diag6 =
   QGRAFSIGN(+1) * PREFACTOR(1) *
    inp([field.part21], k1) *
    inplorentz(+2, iv1r1L2, k1, 0) *
@@ -260,7 +260,7 @@ Local diagram6 =
 *--#] diagram6:
 *--#[ diagram7:
 *
-Local diagram7 =
+Id diag7 =
   QGRAFSIGN(+1) * PREFACTOR(1) *
    inp([field.part21], k1) *
    inplorentz(+2, iv2r3L2, k1, 0) *
@@ -302,7 +302,7 @@ Local diagram7 =
 *--#] diagram7:
 *--#[ diagram8:
 *
-Local diagram8 =
+Id diag8 =
   QGRAFSIGN(+1) * PREFACTOR(1) *
    inp([field.part21], k1) *
    inplorentz(+2, iv2r3L2, k1, 0) *
@@ -344,7 +344,7 @@ Local diagram8 =
 *--#] diagram8:
 *--#[ diagram9:
 *
-Local diagram9 =
+Id diag9 =
   QGRAFSIGN(-1) * PREFACTOR(1) *
    inp([field.part21], k1) *
    inplorentz(+2, iv1r3L2, k1, 0) *
@@ -386,7 +386,7 @@ Local diagram9 =
 *--#] diagram9:
 *--#[ diagram10:
 *
-Local diagram10 =
+Id diag10 =
   QGRAFSIGN(-1) * PREFACTOR(1) *
    inp([field.part21], k1) *
    inplorentz(+2, iv1r3L2, k1, 0) *
@@ -428,7 +428,7 @@ Local diagram10 =
 *--#] diagram10:
 *--#[ diagram11:
 *
-Local diagram11 =
+Id diag11 =
   QGRAFSIGN(-1) * PREFACTOR(1) *
    inp([field.part21], k1) *
    inplorentz(+2, iv1r3L2, k1, 0) *
@@ -470,7 +470,7 @@ Local diagram11 =
 *--#] diagram11:
 *--#[ diagram12:
 *
-Local diagram12 =
+Id diag12 =
   QGRAFSIGN(-1) * PREFACTOR(1) *
    inp([field.part21], k1) *
    inplorentz(+2, iv1r3L2, k1, 0) *
@@ -512,7 +512,7 @@ Local diagram12 =
 *--#] diagram12:
 *--#[ diagram13:
 *
-Local diagram13 =
+Id diag13 =
   QGRAFSIGN(-1) * PREFACTOR(1) *
    inp([field.part21], k1) *
    inplorentz(+2, iv1r3L2, k1, 0) *
@@ -554,7 +554,7 @@ Local diagram13 =
 *--#] diagram13:
 *--#[ diagram14:
 *
-Local diagram14 =
+Id diag14 =
   QGRAFSIGN(-1) * PREFACTOR(1) *
    inp([field.part21], k1) *
    inplorentz(+2, iv1r3L2, k1, 0) *

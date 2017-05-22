@@ -7,12 +7,12 @@
 # generation, please consult the file common/version.f90.
 #
 #
-# 2017-05-19 11:53:00.577359
+# 2017-05-22 15:55:30.354228
 # golem.full-name=GoSam 2.0.4
 # golem.name=GoSam
 # golem.version=2.0.4
 # golem.revision=12f4de9
-# setup-file=/home/iwsatlas1/scyboz/Work/HHPersonal/ggHH_UFO.rc
+# setup-file=/home/iwsatlas1/scyboz/Work/HHPersonal/ggHH_UFO2.rc
 
 ### process_name (text)
 #    A symbolic name for this process. This name will be used
@@ -126,7 +126,7 @@ model=FeynRules,models/HEFT6dim_UFO
 # 
 #    See also: qgraf.options, qgraf.verbatim
 #    
-order=QED,2,2
+order=QL,1,0
 
 ### zero (comma separated list)
 #    A list of symbols that should be treated as identically
@@ -356,8 +356,7 @@ reduction_programs=ninja
 #    customspin2prop --- replace the propagator of spin-2 particles
 #                        with a custom function (read the manual for this).
 #    
-### Default:
-# extensions=
+extensions=autotools
 
 ### debug (comma separated list)
 #    A list of debug flags.

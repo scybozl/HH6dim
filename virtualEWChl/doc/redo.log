@@ -7,7 +7,7 @@
 # generation, please consult the file common/version.f90.
 #
 #
-# 2017-05-19 11:43:04.073670
+# 2017-05-22 15:42:12.420529
 # golem.full-name=GoSam 2.0.4
 # golem.name=GoSam
 # golem.version=2.0.4
@@ -83,7 +83,7 @@ out=h,h
 #    interface in the directory specified by <path>.
 #    (Not fully implemented yet)
 #    
-model=FeynRules,EWChL_UFO
+model=FeynRules,models/EWChL_UFO
 
 ### model.options (comma separated list)
 #    If the model in use supports options they can be passed via this
@@ -356,8 +356,7 @@ reduction_programs=ninja
 #    customspin2prop --- replace the propagator of spin-2 particles
 #                        with a custom function (read the manual for this).
 #    
-### Default:
-# extensions=
+extensions=autotools
 
 ### debug (comma separated list)
 #    A list of debug flags.

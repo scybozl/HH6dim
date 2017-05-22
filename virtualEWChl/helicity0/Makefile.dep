@@ -1,7 +1,7 @@
 # vim: ts=3:sw=3
 
 OBJEXT ?=o
-OBJEXTG=$(OBJEXT)
+OBJEXTG=lo
 # Module Dependencies:
 abbrevd2h0.$(OBJEXTG): globals.$(OBJEXTG)
 d2h0l1.$(OBJEXTG): abbrevd2h0.$(OBJEXTG)

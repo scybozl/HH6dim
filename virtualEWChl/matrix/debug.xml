@@ -1,0 +1,319 @@
+<event>
+ <momentum index='1' inout='in'>
+<component name='E' value='   250.0000000000000    '/>
+<component name='x' value='   0.000000000000000    '/>
+<component name='y' value='   0.000000000000000    '/>
+<component name='z' value='   250.0000000000000    '/>
+<component name='m' value='   0.000000000000000    '/>
+ <!-- k1.k1 =    0.0000000000000000      -->
+ </momentum>
+ <momentum index='2' inout='in'>
+<component name='E' value='   250.0000000000000    '/>
+<component name='x' value='   0.000000000000000    '/>
+<component name='y' value='   0.000000000000000    '/>
+<component name='z' value='  -250.0000000000000    '/>
+<component name='m' value='   0.000000000000000    '/>
+ <!-- k2.k2 =    0.0000000000000000      -->
+ </momentum>
+ <momentum index='3' inout='out'>
+<component name='E' value='   249.9999999999999    '/>
+<component name='x' value='   189.0614126813937    '/>
+<component name='y' value='  -25.62500998753064    '/>
+<component name='z' value='   102.3432513556936    '/>
+<component name='m' value='   125.0000000000000    '/>
+ <!-- k3.k3 =    15624.999999999975      -->
+ </momentum>
+ <momentum index='4' inout='out'>
+<component name='E' value='   250.0000000000001    '/>
+<component name='x' value='  -189.0614126813939    '/>
+<component name='y' value='   25.62500998753064    '/>
+<component name='z' value='  -102.3432513556937    '/>
+<component name='m' value='   125.0000000000000    '/>
+ <!-- k4.k4 =    15624.999999999978      -->
+ </momentum>
+ <!-- es12 =    250000.00000000000      -->
+ <!-- es3 =    15625.000000000000      -->
+ <!-- es23 =   -160546.62567784675      -->
+ <!-- es4 =    15625.000000000000      -->
+ <helicity index='0'>
+ <result name='r2' index='13' value=' (-0.82749313932578494     , -1.6329197949292204E-007) '/>
+ <result name='r2' index='2' value=' ( -0.0000000000000000     , -0.0000000000000000     ) '/>
+ <result name='r2' index='7' value=' (  9.9299176718668822E-002, -1.9595037539150650E-007) '/>
+ <result name='r2' index='11' value=' ( 0.66199451146062793     ,  1.3063358359433763E-007) '/>
+ <result name='r2' index='9' value=' ( 0.66199451146062793     ,  1.3063358359433763E-007) '/>
+<result name='r2' re='  0.5957950603141398    ' im=' -0.9797518769575328E-07' />
+ <diagram-group index='0'>
+ <param name='epspow' value='           0 '/>
+ <diagram index='13'>
+<result kind='nlo-finite' re=' -0.1915752534545548E+01' im='  0.3780418327156447E-06'/>
+<result kind='nlo-single' re=' -0.9929917671909408E+00' im='  0.1959503741577578E-06'/>
+<result kind='nlo-double' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-rational' re=' -0.8274931393257849E+00' im='  0.1632919794955459E-06'/>
+<flag name='ok' status='yes'/>
+ </diagram>
+<result kind='nlo-finite' value='  0.3831505069091096E+01'/>
+<result kind='nlo-single' value='  0.1985983534381882E+01'/>
+<result kind='nlo-double' value='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram-group>
+ <diagram-group index='1'>
+ <param name='epspow' value='           0 '/>
+ <diagram index='2'>
+<result kind='nlo-finite' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-single' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-double' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-rational' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram>
+ <diagram index='7'>
+<result kind='nlo-finite' re=' -0.2689210896669084E+00' im='  0.3021713618945805E+00'/>
+<result kind='nlo-single' re='  0.1942890293094024E-15' im='  0.4428023550449465E-17'/>
+<result kind='nlo-double' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-rational' re=' -0.9929917671866886E-01' im=' -0.1959503753701242E-06'/>
+<flag name='ok' status='yes'/>
+ </diagram>
+ <diagram index='11'>
+<result kind='nlo-finite' re='  0.1740875243459838E+01' im=' -0.1207252979618685E+01'/>
+<result kind='nlo-single' re='  0.4964958835954739E+00' im=' -0.9797518796574381E-07'/>
+<result kind='nlo-double' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-rational' re='  0.1654986278651580E+00' im=' -0.3265839554345007E-07'/>
+<flag name='ok' status='yes'/>
+ </diagram>
+<result kind='nlo-finite' value=' -0.2943908307585859E+01'/>
+<result kind='nlo-single' value=' -0.9929917671909483E+00'/>
+<result kind='nlo-double' value='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram-group>
+ <diagram-group index='2'>
+ <param name='epspow' value='           0 '/>
+ <diagram index='9'>
+<result kind='nlo-finite' re='  0.1713510622241543E+01' im=' -0.4960156668358564E+00'/>
+<result kind='nlo-single' re='  0.4964958835954707E+00' im=' -0.9797518868530681E-07'/>
+<result kind='nlo-double' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-rational' re='  0.1654986278651571E+00' im=' -0.3265839609856158E-07'/>
+<flag name='ok' status='yes'/>
+ </diagram>
+<result kind='nlo-finite' value=' -0.3427021244483085E+01'/>
+<result kind='nlo-single' value=' -0.9929917671909414E+00'/>
+<result kind='nlo-double' value='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram-group>
+<result kind='nlo-finite' value=' -0.1347834362349568E+01'/>
+<result kind='nlo-single' value=' -0.7993605777301127E-14'/>
+<result kind='nlo-double' value='  0.0000000000000000E+00'/>
+<result kind='fin-ren' value='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </helicity>
+ <helicity index='1'>
+ <result name='r2' index='13' value=' (  0.0000000000000000     ,  0.0000000000000000     ) '/>
+ <result name='r2' index='2' value=' ( -0.0000000000000000     , -0.0000000000000000     ) '/>
+ <result name='r2' index='7' value=' (  0.0000000000000000     , -0.0000000000000000     ) '/>
+ <result name='r2' index='11' value=' ( -0.0000000000000000     , -0.0000000000000000     ) '/>
+ <result name='r2' index='9' value=' ( -0.0000000000000000     , -0.0000000000000000     ) '/>
+<result name='r2' re='   0.000000000000000    ' im='   0.000000000000000    ' />
+ <diagram-group index='0'>
+ <param name='epspow' value='           0 '/>
+ <diagram index='13'>
+<result kind='nlo-finite' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-single' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-double' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-rational' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram>
+<result kind='nlo-finite' value='  0.0000000000000000E+00'/>
+<result kind='nlo-single' value='  0.0000000000000000E+00'/>
+<result kind='nlo-double' value='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram-group>
+ <diagram-group index='1'>
+ <param name='epspow' value='           0 '/>
+ <diagram index='2'>
+<result kind='nlo-finite' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-single' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-double' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-rational' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram>
+ <diagram index='7'>
+<result kind='nlo-finite' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-single' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-double' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-rational' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram>
+ <diagram index='11'>
+<result kind='nlo-finite' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-single' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-double' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-rational' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram>
+<result kind='nlo-finite' value='  0.0000000000000000E+00'/>
+<result kind='nlo-single' value='  0.0000000000000000E+00'/>
+<result kind='nlo-double' value='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram-group>
+ <diagram-group index='2'>
+ <param name='epspow' value='           0 '/>
+ <diagram index='9'>
+<result kind='nlo-finite' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-single' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-double' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-rational' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram>
+<result kind='nlo-finite' value='  0.0000000000000000E+00'/>
+<result kind='nlo-single' value='  0.0000000000000000E+00'/>
+<result kind='nlo-double' value='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram-group>
+<result kind='nlo-finite' value='  0.0000000000000000E+00'/>
+<result kind='nlo-single' value='  0.0000000000000000E+00'/>
+<result kind='nlo-double' value='  0.0000000000000000E+00'/>
+<result kind='fin-ren' value='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </helicity>
+ <helicity index='2'>
+ <result name='r2' index='13' value=' (  0.0000000000000000     ,  0.0000000000000000     ) '/>
+ <result name='r2' index='2' value=' ( -0.0000000000000000     , -0.0000000000000000     ) '/>
+ <result name='r2' index='7' value=' (  0.0000000000000000     , -0.0000000000000000     ) '/>
+ <result name='r2' index='11' value=' ( -0.0000000000000000     , -0.0000000000000000     ) '/>
+ <result name='r2' index='9' value=' ( -0.0000000000000000     , -0.0000000000000000     ) '/>
+<result name='r2' re='   0.000000000000000    ' im='   0.000000000000000    ' />
+ <diagram-group index='0'>
+ <param name='epspow' value='           0 '/>
+ <diagram index='13'>
+<result kind='nlo-finite' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-single' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-double' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-rational' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram>
+<result kind='nlo-finite' value='  0.0000000000000000E+00'/>
+<result kind='nlo-single' value='  0.0000000000000000E+00'/>
+<result kind='nlo-double' value='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram-group>
+ <diagram-group index='1'>
+ <param name='epspow' value='           0 '/>
+ <diagram index='2'>
+<result kind='nlo-finite' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-single' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-double' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-rational' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram>
+ <diagram index='7'>
+<result kind='nlo-finite' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-single' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-double' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-rational' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram>
+ <diagram index='11'>
+<result kind='nlo-finite' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-single' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-double' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-rational' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram>
+<result kind='nlo-finite' value='  0.0000000000000000E+00'/>
+<result kind='nlo-single' value='  0.0000000000000000E+00'/>
+<result kind='nlo-double' value='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram-group>
+ <diagram-group index='2'>
+ <param name='epspow' value='           0 '/>
+ <diagram index='9'>
+<result kind='nlo-finite' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-single' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-double' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-rational' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram>
+<result kind='nlo-finite' value='  0.0000000000000000E+00'/>
+<result kind='nlo-single' value='  0.0000000000000000E+00'/>
+<result kind='nlo-double' value='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram-group>
+<result kind='nlo-finite' value='  0.0000000000000000E+00'/>
+<result kind='nlo-single' value='  0.0000000000000000E+00'/>
+<result kind='nlo-double' value='  0.0000000000000000E+00'/>
+<result kind='fin-ren' value='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </helicity>
+ <helicity index='3'>
+ <result name='r2' index='13' value=' (-0.82749313932578494     , -1.6329197949292204E-007) '/>
+ <result name='r2' index='2' value=' ( -0.0000000000000000     ,  0.0000000000000000     ) '/>
+ <result name='r2' index='7' value=' (  9.9299176718668822E-002, -1.9595037539150650E-007) '/>
+ <result name='r2' index='11' value=' ( 0.66199451146062793     ,  1.3063358359433763E-007) '/>
+ <result name='r2' index='9' value=' ( 0.66199451146062793     ,  1.3063358359433763E-007) '/>
+<result name='r2' re='  0.5957950603141398    ' im=' -0.9797518769575328E-07' />
+ <diagram-group index='0'>
+ <param name='epspow' value='           0 '/>
+ <diagram index='13'>
+<result kind='nlo-finite' re=' -0.1915752534545543E+01' im='  0.3780418324745037E-06'/>
+<result kind='nlo-single' re=' -0.9929917671909438E+00' im='  0.1959503760119718E-06'/>
+<result kind='nlo-double' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-rational' re=' -0.8274931393257849E+00' im='  0.1632919795386967E-06'/>
+<flag name='ok' status='yes'/>
+ </diagram>
+<result kind='nlo-finite' value='  0.3831505069091087E+01'/>
+<result kind='nlo-single' value='  0.1985983534381888E+01'/>
+<result kind='nlo-double' value='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram-group>
+ <diagram-group index='1'>
+ <param name='epspow' value='           0 '/>
+ <diagram index='2'>
+<result kind='nlo-finite' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-single' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-double' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-rational' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram>
+ <diagram index='7'>
+<result kind='nlo-finite' re=' -0.2689210896669084E+00' im='  0.3021713618945805E+00'/>
+<result kind='nlo-single' re='  0.1942890293094024E-15' im='  0.4428023550449465E-17'/>
+<result kind='nlo-double' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-rational' re=' -0.9929917671866886E-01' im=' -0.1959503753701242E-06'/>
+<flag name='ok' status='yes'/>
+ </diagram>
+ <diagram index='11'>
+<result kind='nlo-finite' re='  0.1713510622241543E+01' im=' -0.4960156668358505E+00'/>
+<result kind='nlo-single' re='  0.4964958835954700E+00' im=' -0.9797518729230200E-07'/>
+<result kind='nlo-double' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-rational' re='  0.1654986278651571E+00' im=' -0.3265839609856158E-07'/>
+<flag name='ok' status='yes'/>
+ </diagram>
+<result kind='nlo-finite' value=' -0.2889179065149269E+01'/>
+<result kind='nlo-single' value=' -0.9929917671909405E+00'/>
+<result kind='nlo-double' value='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram-group>
+ <diagram-group index='2'>
+ <param name='epspow' value='           0 '/>
+ <diagram index='9'>
+<result kind='nlo-finite' re='  0.1740875243459837E+01' im=' -0.1207252979618683E+01'/>
+<result kind='nlo-single' re='  0.4964958835954726E+00' im=' -0.9797518793933521E-07'/>
+<result kind='nlo-double' re=' -0.0000000000000000E+00' im='  0.0000000000000000E+00'/>
+<result kind='nlo-rational' re='  0.1654986278651578E+00' im=' -0.3265839554345007E-07'/>
+<flag name='ok' status='yes'/>
+ </diagram>
+<result kind='nlo-finite' value=' -0.3481750486919674E+01'/>
+<result kind='nlo-single' value=' -0.9929917671909452E+00'/>
+<result kind='nlo-double' value='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </diagram-group>
+<result kind='nlo-finite' value=' -0.1347834362349576E+01'/>
+<result kind='nlo-single' value='  0.1998401444325282E-14'/>
+<result kind='nlo-double' value='  0.0000000000000000E+00'/>
+<result kind='fin-ren' value='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+ </helicity>
+<result kind='lo' value='  0.2283293574354919E-03'/>
+<result kind='nlo-finite' value=' -0.3538628675917296E-02'/>
+<result kind='nlo-single' value=' -0.7869958862626813E-17'/>
+<result kind='nlo-double' value='  0.0000000000000000E+00'/>
+<flag name='ok' status='yes'/>
+</event>

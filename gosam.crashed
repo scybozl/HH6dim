@@ -1,12 +1,12 @@
 ---#[ COMMAND LINE ARGUMENTS:
-'ggHH_UFO.rc'
+'ggHH_UFO2.rc'
 ---#] COMMAND LINE ARGUMENTS:
 ---#[ MESSAGES:
 GoSam 2.0.4
-Writing template file '/tmp/tmpfKkIuw.gosam.in'
-Processing 'ggHH_UFO.rc'
+Writing template file '/tmp/tmpTHQh6z.gosam.in'
+Processing 'ggHH_UFO2.rc'
 Configuration file is not sound:
-GoSam Configuration Error: The directory '/home/iwsatlas1/scyboz/Work/HHPersonal/virtualUFOtest' contains files created by '/home/iwsatlas1/scyboz/Work/HHPersonal/ggHHtest.rc', which does no longer exist.
+GoSam Configuration Error: The directory '/home/iwsatlas1/scyboz/Work/HHPersonal/virtualUFOtest' contains files created by '/home/iwsatlas1/scyboz/Work/HHPersonal/ggHH_UFO.rc', which is not the same as '/home/iwsatlas1/scyboz/Work/HHPersonal/ggHH_UFO2.rc'.
 If you actually want to overwrite these files you need to remove the file '.golem.dir' in that directory.
 ---#] MESSAGES:
 ---#[ LAST WORDS:
@@ -63,6 +63,7 @@ renorm_beta=False
 avh_olo.ldflags=-L${HOME}/Work/local/lib -lavh_olo
 r2=explicit
 gosam-contrib_libff.ldflags=-L/home/iwsatlas1/scyboz/Work/local/lib -lff
+extensions=autotools
 gosam-contrib_libolo.ldflags=-L/home/iwsatlas1/scyboz/Work/local/lib -lavh_olo
 qgraf.bin=${HOME}/Work/Herwig/bin/qgraf
 abbrev.level=diagram
@@ -99,7 +100,7 @@ ninja.ldflags=-L${HOME}/Work/local/lib -lninja
 reduction_interoperation_rescue=-1
 pyxodraw=True
 +gosam-contrib_libolo.ldflags=-L/home/iwsatlas1/scyboz/Work/local/lib -lavh_olo
-setup-file=/home/iwsatlas1/scyboz/Work/HHPersonal/ggHH_UFO.rc
+setup-file=/home/iwsatlas1/scyboz/Work/HHPersonal/ggHH_UFO2.rc
 abbrev.limit=500
 +avh_olo.ldflags=-L${HOME}/Work/local/lib -lavh_olo
 haggies.bin=/usr/bin/java -jar ${HOME}/Work/local/share/golem/haggies/haggies.jar
@@ -114,7 +115,7 @@ samurai.fcflags=-I${HOME}/Work/local/include/gosam-contrib
 samurai_scalar=2
 form.workspace=1000
 model=FeynRules,models/HEFT6dim_UFO
-order=QED,2,2
+order=QL,1,0
 ---#] CONFIG:
 ---#[ ENABLED EXTENSIONS:
 ---#] ENABLED EXTENSIONS:

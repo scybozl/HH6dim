@@ -32,28 +32,10 @@ contains
       use gghh_smehc_globalsl1, only: amp0,perm, use_perm, epspow
       use gghh_smehc_globalsh0, &
      & only: init_lo, rat2
-      use gghh_smehc_abbrevd3h0, only: init_abbrevd3 => init_abbrev
-      use gghh_smehc_abbrevd8h0, only: init_abbrevd8 => init_abbrev
-      use gghh_smehc_abbrevd10h0, only: init_abbrevd10 => init_abbrev
-      use gghh_smehc_abbrevd13h0, only: init_abbrevd13 => init_abbrev
-      use gghh_smehc_abbrevd33h0, only: init_abbrevd33 => init_abbrev
-      use gghh_smehc_abbrevd36h0, only: init_abbrevd36 => init_abbrev
-      use gghh_smehc_abbrevd40h0, only: init_abbrevd40 => init_abbrev
-      use gghh_smehc_abbrevd1h0, only: init_abbrevd1 => init_abbrev
-      use gghh_smehc_abbrevd2h0, only: init_abbrevd2 => init_abbrev
-      use gghh_smehc_abbrevd4h0, only: init_abbrevd4 => init_abbrev
-      use gghh_smehc_abbrevd7h0, only: init_abbrevd7 => init_abbrev
       use gghh_smehc_abbrevd9h0, only: init_abbrevd9 => init_abbrev
-      use gghh_smehc_abbrevd11h0, only: init_abbrevd11 => init_abbrev
-      use gghh_smehc_abbrevd12h0, only: init_abbrevd12 => init_abbrev
-      use gghh_smehc_abbrevd14h0, only: init_abbrevd14 => init_abbrev
-      use gghh_smehc_abbrevd17h0, only: init_abbrevd17 => init_abbrev
-      use gghh_smehc_abbrevd21h0, only: init_abbrevd21 => init_abbrev
-      use gghh_smehc_abbrevd34h0, only: init_abbrevd34 => init_abbrev
-      use gghh_smehc_abbrevd35h0, only: init_abbrevd35 => init_abbrev
+      use gghh_smehc_abbrevd25h0, only: init_abbrevd25 => init_abbrev
+      use gghh_smehc_abbrevd26h0, only: init_abbrevd26 => init_abbrev
       use gghh_smehc_abbrevd37h0, only: init_abbrevd37 => init_abbrev
-      use gghh_smehc_abbrevd39h0, only: init_abbrevd39 => init_abbrev
-      use gghh_smehc_abbrevd38h0, only: init_abbrevd38 => init_abbrev
       use gghh_smehc_diagramsh0l0, only: amplitudel0 => amplitude
       use gghh_smehc_groups
       implicit none
@@ -87,28 +69,10 @@ contains
 
       rat2 = (0.0_ki, 0.0_ki)
       call init_lo()
-        call init_abbrevd3()
-        call init_abbrevd8()
-        call init_abbrevd10()
-        call init_abbrevd13()
-        call init_abbrevd33()
-        call init_abbrevd36()
-        call init_abbrevd40()
-        call init_abbrevd1()
-        call init_abbrevd2()
-        call init_abbrevd4()
-        call init_abbrevd7()
         call init_abbrevd9()
-        call init_abbrevd11()
-        call init_abbrevd12()
-        call init_abbrevd14()
-        call init_abbrevd17()
-        call init_abbrevd21()
-        call init_abbrevd34()
-        call init_abbrevd35()
+        call init_abbrevd25()
+        call init_abbrevd26()
         call init_abbrevd37()
-        call init_abbrevd39()
-        call init_abbrevd38()
       epspow=0
       samplitude(-2) = 0.0_ki
       samplitude(-1) = 0.0_ki
@@ -120,12 +84,6 @@ contains
       rational2 = 2.0_ki * real(rat2, ki)
       samplitude(0) = 2.0_ki * real(rat2, ki)
          call evaluate_group0(scale2, acc, acc_ok)
-         ok = ok .and. acc_ok
-         samplitude(:) = samplitude(:) + acc
-         call evaluate_group1(scale2, acc, acc_ok)
-         ok = ok .and. acc_ok
-         samplitude(:) = samplitude(:) + acc
-         call evaluate_group2(scale2, acc, acc_ok)
          ok = ok .and. acc_ok
          samplitude(:) = samplitude(:) + acc
    end function samplitude
@@ -176,96 +134,4 @@ subroutine     evaluate_group0(scale2,samplitude,ok)
    end if
 end subroutine evaluate_group0
 !---#] subroutine evaluate_group0:
-!---#[ subroutine evaluate_group1:
-subroutine     evaluate_group1(scale2,samplitude,ok)
-   use gghh_smehc_config, only: &
-      & logfile, debug_nlo_diagrams
-   use gghh_smehc_globalsl1, only: epspow
-   use gghh_smehc_ninjah0, only: ninja_reduce => ninja_reduce_group1
-   implicit none
-   real(ki), intent(in) :: scale2
-   logical, intent(out) :: ok
-   real(ki), dimension(-2:0), intent(out) :: samplitude
-   complex(ki_nin), dimension(-2:0) :: tot
-   complex(ki_nin) :: totr
-
-   if(debug_nlo_diagrams) then
-      write(logfile,*) "<diagram-group index='1'>"
-      write(logfile,*) "<param name='epspow' value='", epspow, "'/>"
-   end if
-   select case(reduction_interoperation)
-   case(2) ! use Ninja only
-      call ninja_reduce(real(scale2, ki_nin), tot, totr, ok)
-      samplitude(:) = 2.0_ki * real(tot(:), ki)
-   case default
-      print*, "Your current choice of reduction_interoperation is", &
-            & reduction_interoperation
-      print*, "This choice is not valid for your current setup."
-      print*, "* This code was generated without support for Samurai."
-      print*, "* This code was generated with support for Ninja."
-      print*, "* This code was generated without support for Golem95."
-   end select
-
-   if(debug_nlo_diagrams) then
-      write(logfile,'(A33,E24.16,A3)') &
-         & "<result kind='nlo-finite' value='", samplitude(0), "'/>"
-      write(logfile,'(A33,E24.16,A3)') &
-         & "<result kind='nlo-single' value='", samplitude(-1), "'/>"
-      write(logfile,'(A33,E24.16,A3)') &
-         & "<result kind='nlo-double' value='", samplitude(-2), "'/>"
-      if(ok) then
-         write(logfile,'(A30)') "<flag name='ok' status='yes'/>"
-      else
-         write(logfile,'(A29)') "<flag name='ok' status='no'/>"
-      end if
-      write(logfile,*) "</diagram-group>"
-   end if
-end subroutine evaluate_group1
-!---#] subroutine evaluate_group1:
-!---#[ subroutine evaluate_group2:
-subroutine     evaluate_group2(scale2,samplitude,ok)
-   use gghh_smehc_config, only: &
-      & logfile, debug_nlo_diagrams
-   use gghh_smehc_globalsl1, only: epspow
-   use gghh_smehc_ninjah0, only: ninja_reduce => ninja_reduce_group2
-   implicit none
-   real(ki), intent(in) :: scale2
-   logical, intent(out) :: ok
-   real(ki), dimension(-2:0), intent(out) :: samplitude
-   complex(ki_nin), dimension(-2:0) :: tot
-   complex(ki_nin) :: totr
-
-   if(debug_nlo_diagrams) then
-      write(logfile,*) "<diagram-group index='2'>"
-      write(logfile,*) "<param name='epspow' value='", epspow, "'/>"
-   end if
-   select case(reduction_interoperation)
-   case(2) ! use Ninja only
-      call ninja_reduce(real(scale2, ki_nin), tot, totr, ok)
-      samplitude(:) = 2.0_ki * real(tot(:), ki)
-   case default
-      print*, "Your current choice of reduction_interoperation is", &
-            & reduction_interoperation
-      print*, "This choice is not valid for your current setup."
-      print*, "* This code was generated without support for Samurai."
-      print*, "* This code was generated with support for Ninja."
-      print*, "* This code was generated without support for Golem95."
-   end select
-
-   if(debug_nlo_diagrams) then
-      write(logfile,'(A33,E24.16,A3)') &
-         & "<result kind='nlo-finite' value='", samplitude(0), "'/>"
-      write(logfile,'(A33,E24.16,A3)') &
-         & "<result kind='nlo-single' value='", samplitude(-1), "'/>"
-      write(logfile,'(A33,E24.16,A3)') &
-         & "<result kind='nlo-double' value='", samplitude(-2), "'/>"
-      if(ok) then
-         write(logfile,'(A30)') "<flag name='ok' status='yes'/>"
-      else
-         write(logfile,'(A29)') "<flag name='ok' status='no'/>"
-      end if
-      write(logfile,*) "</diagram-group>"
-   end if
-end subroutine evaluate_group2
-!---#] subroutine evaluate_group2:
 end module gghh_smehc_amplitudeh0

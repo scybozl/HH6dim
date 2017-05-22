@@ -25,3 +25,4 @@ reduction_programs=ninja
 #polvec=explicit
 #r2=explicit
 debug=nlo
+extensions=autotools

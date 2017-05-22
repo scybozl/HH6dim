@@ -1,0 +1,70 @@
+# vim: ts=3:sw=3
+
+OBJEXT ?=o
+OBJEXTG=$(OBJEXT)
+# Module Dependencies:
+abbrevd4h0.$(OBJEXTG): globals.$(OBJEXTG)
+d4h0l1.$(OBJEXTG): abbrevd4h0.$(OBJEXTG)
+d4h0l1d.$(OBJEXTG): abbrevd4h0.$(OBJEXTG)
+abbrevd6h0.$(OBJEXTG): globals.$(OBJEXTG)
+d6h0l1.$(OBJEXTG): abbrevd6h0.$(OBJEXTG)
+d6h0l1d.$(OBJEXTG): abbrevd6h0.$(OBJEXTG)
+abbrevd8h0.$(OBJEXTG): globals.$(OBJEXTG)
+d8h0l1.$(OBJEXTG): abbrevd8h0.$(OBJEXTG)
+d8h0l1d.$(OBJEXTG): abbrevd8h0.$(OBJEXTG)
+abbrevd10h0.$(OBJEXTG): globals.$(OBJEXTG)
+d10h0l1.$(OBJEXTG): abbrevd10h0.$(OBJEXTG)
+d10h0l1d.$(OBJEXTG): abbrevd10h0.$(OBJEXTG)
+ninjah0.$(OBJEXTG):  \
+	d4h0l1.$(OBJEXTG) d4h0l131.$(OBJEXTG) d4h0l132.$(OBJEXTG) d4h0l121.$(OBJEXTG) \
+	d6h0l1.$(OBJEXTG) d6h0l131.$(OBJEXTG) d6h0l132.$(OBJEXTG) d6h0l121.$(OBJEXTG) \
+	d8h0l1.$(OBJEXTG) d8h0l131.$(OBJEXTG) d8h0l132.$(OBJEXTG) d8h0l121.$(OBJEXTG) \
+	d10h0l1.$(OBJEXTG) d10h0l131.$(OBJEXTG) d10h0l132.$(OBJEXTG) d10h0l121.$(OBJEXTG)
+d4h0l131.$(OBJEXTG): abbrevd4h0.$(OBJEXTG)
+d4h0l132.$(OBJEXTG): abbrevd4h0.$(OBJEXTG)
+d4h0l121.$(OBJEXTG): abbrevd4h0.$(OBJEXTG)
+d6h0l131.$(OBJEXTG): abbrevd6h0.$(OBJEXTG)
+d6h0l132.$(OBJEXTG): abbrevd6h0.$(OBJEXTG)
+d6h0l121.$(OBJEXTG): abbrevd6h0.$(OBJEXTG)
+d8h0l131.$(OBJEXTG): abbrevd8h0.$(OBJEXTG)
+d8h0l132.$(OBJEXTG): abbrevd8h0.$(OBJEXTG)
+d8h0l121.$(OBJEXTG): abbrevd8h0.$(OBJEXTG)
+d10h0l131.$(OBJEXTG): abbrevd10h0.$(OBJEXTG)
+d10h0l132.$(OBJEXTG): abbrevd10h0.$(OBJEXTG)
+d10h0l121.$(OBJEXTG): abbrevd10h0.$(OBJEXTG)
+amplitudeh0.$(OBJEXTG): globals.$(OBJEXTG) diagramsl0.$(OBJEXTG) ninjah0.$(OBJEXTG) \
+			diagramsl0.$(OBJEXTG) \
+			abbrevd4h0.$(OBJEXTG) \
+			abbrevd6h0.$(OBJEXTG) \
+			abbrevd8h0.$(OBJEXTG) \
+			abbrevd10h0.$(OBJEXTG)
+gghh_diagramsh0l0.mod: diagramsl0.$(OBJEXTG)
+gghh_d1h0l0.mod: d1h0l0.$(OBJEXTG)
+gghh_d2h0l0.mod: d2h0l0.$(OBJEXTG)
+gghh_ninjah0.mod: ninjah0.$(OBJEXTG) 
+gghh_d4h0l131.mod: d4h0l131.$(OBJEXTG)
+gghh_d4h0l132.mod: d4h0l132.$(OBJEXTG)
+gghh_d4h0l121.mod: d4h0l121.$(OBJEXTG)
+gghh_d6h0l131.mod: d6h0l131.$(OBJEXTG)
+gghh_d6h0l132.mod: d6h0l132.$(OBJEXTG)
+gghh_d6h0l121.mod: d6h0l121.$(OBJEXTG)
+gghh_d8h0l131.mod: d8h0l131.$(OBJEXTG)
+gghh_d8h0l132.mod: d8h0l132.$(OBJEXTG)
+gghh_d8h0l121.mod: d8h0l121.$(OBJEXTG)
+gghh_d10h0l131.mod: d10h0l131.$(OBJEXTG)
+gghh_d10h0l132.mod: d10h0l132.$(OBJEXTG)
+gghh_d10h0l121.mod: d10h0l121.$(OBJEXTG)
+gghh_abbrevd4h0.mod: abbrevd4h0.$(OBJEXTG)
+gghh_d4h0l1.mod: d4h0l1.$(OBJEXTG)
+gghh_d4h0l1d.mod: d4h0l1d.$(OBJEXTG)
+gghh_abbrevd6h0.mod: abbrevd6h0.$(OBJEXTG)
+gghh_d6h0l1.mod: d6h0l1.$(OBJEXTG)
+gghh_d6h0l1d.mod: d6h0l1d.$(OBJEXTG)
+gghh_abbrevd8h0.mod: abbrevd8h0.$(OBJEXTG)
+gghh_d8h0l1.mod: d8h0l1.$(OBJEXTG)
+gghh_d8h0l1d.mod: d8h0l1d.$(OBJEXTG)
+gghh_abbrevd10h0.mod: abbrevd10h0.$(OBJEXTG)
+gghh_d10h0l1.mod: d10h0l1.$(OBJEXTG)
+gghh_d10h0l1d.mod: d10h0l1d.$(OBJEXTG)
+gghh_amplitudeh0.mod: amplitudeh0.$(OBJEXTG)
+gghh_globalsh0.mod: globals.$(OBJEXTG)

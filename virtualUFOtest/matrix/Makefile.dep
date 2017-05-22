@@ -1,7 +1,9 @@
 
 OBJEXT ?=o
-OBJEXTG=$(OBJEXT)
+OBJEXTG=lo
 # Module Dependencies:
 gghh_test.mod: test.$(OBJEXTG)
 gghh_matrix.mod: matrix.$(OBJEXTG)
 test.$(OBJEXT): matrix.$(OBJEXT)
+matrix.$(OBJEXT): matrix.$(OBJEXTG)
+../matrix/libgolem_process_gghh_matrix.la: libgolem_process_gghh_matrix.la

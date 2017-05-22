@@ -1,0 +1,10 @@
+*--#[ BIG:
+L BIG=CLabel^3*cabb(2) + TLabel^27*cabb(3) + TLabel^47*cabb(1) + TLabel^51*
+      cabb(3);
+*--#] BIG:
+*--#[ labeltranslation:
+#Define T11c11 "TLabel^27"
+#Define T12c11 "TLabel^47"
+#Define T22c11 "TLabel^51"
+#Define C11 "CLabel^3"
+*--#] labeltranslation:
