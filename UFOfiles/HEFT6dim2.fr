@@ -1,0 +1,209 @@
+(*****************************************************************************************************)
+(*            This is the FeynRules model file for the Electroweak Chiral Lagrangian             *)
+(*                                                                                                   *)
+(*                                                                                                   *)
+(*****************************************************************************************************)
+
+
+(* ************************** *)
+(* *****  Information   ***** *)
+(* ************************** *)
+
+M$ModelName = "HEFT6dim";
+
+M$Information = {
+ Authors      -> {"Author"},
+ Version      -> "0.3",
+ Date         -> "16.02.2017",
+ Institutions -> {"Institution"},
+ Emails       -> {"email"},
+ URLs         -> "web",
+ References   -> {"references"}
+};
+
+
+
+(* ************************** *)
+(* *****  Change  log   ***** *)
+(* ************************** *)
+
+(* v0.2: *)
+(* Factor of 2 changed in the cVhh vertex so that the SM limit corresponds to cVhh = 1 *)
+(* Corrected bug in definition of h^3 and h^4  *)
+(* Normalization factor added to h^3 and h^4 terms so that SM limit corresponds now to coupling = 1   *)
+(* Added QED order 1 to leading order Higgs couplings because MadGraph complaints when there are couplings without any order.   *)
+
+(* v0.3: *)
+(* Lorentz contraction corrected for hVV and hhVV couplings *)
+
+
+FeynmanGauge = False;
+
+(***** Setting for interaction order (as e.g. used by MadGraph 5)  ******)
+
+M$InteractionOrderLimit = {
+ {QL, 1}
+};
+
+M$InteractionOrderHierarchy = {
+  {QL, 2}
+};
+
+
+(***** Particle classes list ******)
+
+(***** Definition of the physical Higgs particle ******)
+
+M$ClassesDescription = {
+
+ S[1] == { ClassName -> h,
+      	   SelfConjugate -> True,
+   	   Mass -> {Mh, Internal},
+   	   Width -> {Wh, 0.00407},
+           ParticleName -> "h",
+           PDG -> 5000000,
+           PropagatorLabel -> "h",
+           PropagatorType  -> D,
+           PropagatorArrow -> None,
+           FullName -> "h"}
+};
+
+
+
+
+(***** Parameter list ******)
+
+M$Parameters = {
+
+ cV == { ParameterType -> External,
+         Value -> 1,
+         TeX -> Subscript[c,V],
+         InteractionOrder -> {QED,1},
+         Description -> "Scaling of the Higgs coupling to massive vector bosons"},
+
+ ct == { ParameterType -> External,
+         Value -> 1,
+         TeX -> Subscript[c,t],
+         InteractionOrder -> {QED,1},
+         Description -> "Scaling of the top Yukawa"},
+
+ cb == { ParameterType -> External,
+	      Value -> 1,
+          TeX -> Subscript[c,b],
+          InteractionOrder -> {QED,1},
+	      Description -> "Scaling of the bottom Yukawa"},
+
+ ctau == { ParameterType -> External,
+	   Value -> 1, 
+           TeX -> Subscript[c,tau],
+           InteractionOrder -> {QED,1},
+           Description -> "Scaling of the tau Yukawa"},
+
+ cg == { ParameterType -> External,
+	   Value -> 0,
+           TeX -> Subscript[c,g],
+           InteractionOrder -> {QL,1},
+           Description -> "Higgs coupling to gluons"},
+
+ cgg == { ParameterType -> External,
+           Value -> 0,
+           TeX -> Subscript[c,gg],
+           InteractionOrder -> {QL,1},
+           Description -> "Double Higgs coupling to gluons"},
+
+ ctt == { ParameterType -> External,
+           Value -> 0,
+           TeX -> Subscript[c,tt],
+           InteractionOrder -> {QL,1},
+           Description -> "Double Higgs coupling to two tops"},
+
+ c3 == { ParameterType -> External,
+       Value -> 1,
+       TeX -> Subscript[c,3],
+       InteractionOrder -> {QED,1},
+       Description -> "Triple Higgs coupling"},
+
+ loop == { ParameterType -> Internal,
+	 Value -> 16*Pi^2,
+	 TeX -> Subscript[L,f],
+         Description -> "loop factor"},
+
+ yyt == { ParameterType -> Internal,
+	 Value -> ymt/v,
+	 TeX -> Subscript[y,t],
+         Description -> "top quark Yukawa coupling"},
+		
+ yytau == { ParameterType -> Internal,
+	 Value -> ymtau/v,
+ 	 TeX -> Subscript[y,tau],
+         Description -> "tau Yukawa coupling"},
+
+ yyb == { ParameterType -> Internal,
+	     Value -> ymb/v,
+         TeX -> Subscript[y,b],
+	     Description -> "bottom Yukawa coupling"},
+
+  v == {
+         ParameterType    -> Internal,
+         Value            -> 2*MW*sw/ee,
+         Description      -> "Higgs VEV"},
+
+  mtch == { ParameterType -> Internal,
+            Value -> 1+11/4*aS/Pi,
+            ComplexParameter -> False,
+            TeX -> Subscript[K,m],
+            Description -> "Matching factor from EFT to NLO QCD"},
+
+  cggh == {
+	ParameterType	 -> Internal,
+	Value		 -> cg + ct / 12 * mtch,
+	InteractionOrder -> {QL,1},
+	Description	 -> "Effective ggH coupling"},
+
+  cgghh == {
+	ParameterType	 -> Internal,
+	Value		 -> cgg + (ctt - ct^2)/12 * mtch,
+	InteractionOrder -> {QL,1},
+	Description	 -> "Effective ggHH coupling"},
+
+  Mh == {
+        ParameterType    -> Internal,
+        Value            -> 125.0,
+        Description      -> "Higgs mass"},
+
+  normh3 == {
+        ParameterType -> Internal,
+        Value -> 3*Mh*Mh/v,
+        Description -> "Normalization of Triple Higgs coupling"},
+
+  normh4 == {
+        ParameterType -> Internal,
+        Value -> Mh*Mh/(8*v*v),
+        Description -> "Normalization of Quartic Higgs coupling"}
+
+};
+
+
+(*****************************************************************************************)
+(**************************************** Lagrangian *************************************)
+(*****************************************************************************************)
+
+(***** Conventions for the Lagrangian fixed following the Non-Linear EFT section of 1610.07922  ******)
+
+
+Lhkin := del[h,mu]del[h,mu]/2  - (Mh^2/2) h h;
+
+Lh := (  - ct yyt tbar[sp,cc] t[sp,cc] +  4 cggh gs^2 / (16 v Pi^2) FS[G,mu,nu,a] FS[G,mu,nu,a] ) h;
+
+
+Lhh := (  gs^2/( 8 v^2 Pi^2 ) cgghh FS[G,mu,nu,a] FS[G,mu,nu,a]
+        - 1/2 ctt yyt/v tbar[sp,cc] t[sp,cc]  ) h h;
+
+Lh3 := - c3 1/6 normh3 h h h;
+
+Lh4 := - normh4 h h h h;
+
+
+(*****************************************************************************************)
+
+LagHEFT6dim := LSM + Lhkin + Lh + Lhh + Lh3 + Lh4;
