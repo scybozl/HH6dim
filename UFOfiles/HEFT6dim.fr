@@ -148,6 +148,25 @@ M$Parameters = {
          Value            -> 2*MW*sw/ee,
          Description      -> "Higgs VEV"},
 
+  mtch == { ParameterType -> Internal,
+(*            Value -> 1+11/4*aS/Pi, *)
+	    Value -> 0,
+            ComplexParameter -> False,
+            TeX -> Subscript[K,m],
+            Description -> "Matching factor from EFT to NLO QCD"},
+
+  cggh == {
+	ParameterType	 -> Internal,
+	Value		 -> cg + ct / 12 * mtch,
+	InteractionOrder -> {QL,1},
+	Description	 -> "Effective ggH coupling"},
+
+  cgghh == {
+	ParameterType	 -> Internal,
+	Value		 -> cgg + (ctt - ct^2)/12 * mtch,
+	InteractionOrder -> {QL,1},
+	Description	 -> "Effective ggHH coupling"},
+
   Mh == {
         ParameterType    -> Internal,
         Value            -> 125.0,
@@ -175,10 +194,10 @@ M$Parameters = {
 
 Lhkin := del[h,mu]del[h,mu]/2  - (Mh^2/2) h h;
 
-Lh := (  - ct yyt tbar[sp,cc] t[sp,cc] +  4 cg gs^2 / (v loop) FS[G,mu,nu,a] FS[G,mu,nu,a] ) h;
+Lh := (  - ct yyt tbar[sp,cc] t[sp,cc] +  4 cggh gs^2 / (16 v Pi^2) FS[G,mu,nu,a] FS[G,mu,nu,a] ) h;
 
 
-Lhh := (  2 gs^2/( v^2 loop ) cgg FS[G,mu,nu,a] FS[G,mu,nu,a]
+Lhh := (  gs^2/( 8 v^2 Pi^2 ) cgghh FS[G,mu,nu,a] FS[G,mu,nu,a]
         - 1/2 ctt yyt/v tbar[sp,cc] t[sp,cc]  ) h h;
 
 Lh3 := - c3 1/6 normh3 h h h;
