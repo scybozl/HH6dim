@@ -1,6 +1,6 @@
-# This file was automatically created by FeynRules 2.3.22
-# Mathematica version: 10.3.0 for Mac OS X x86 (64-bit) (October 9, 2015)
-# Date: Thu 16 Feb 2017 17:16:10
+# This file was automatically created by FeynRules 2.3.27
+# Mathematica version: 10.4.1 for Linux x86 (64-bit) (April 11, 2016)
+# Date: Thu 12 Oct 2017 11:30:44
 
 
 from object_library import all_couplings, Coupling
@@ -30,15 +30,15 @@ GC_5 = Coupling(name = 'GC_5',
                 order = {'QED':2})
 
 GC_6 = Coupling(name = 'GC_6',
-                value = '-G',
+                value = '-gs',
                 order = {'QCD':1})
 
 GC_7 = Coupling(name = 'GC_7',
-                value = 'complex(0,1)*G',
+                value = 'complex(0,1)*gs',
                 order = {'QCD':1})
 
 GC_8 = Coupling(name = 'GC_8',
-                value = 'complex(0,1)*G**2',
+                value = 'complex(0,1)*gs**2',
                 order = {'QCD':2})
 
 GC_9 = Coupling(name = 'GC_9',
@@ -130,15 +130,15 @@ GC_30 = Coupling(name = 'GC_30',
                  order = {'QED':1})
 
 GC_31 = Coupling(name = 'GC_31',
-                 value = '(4*cgghh*complex(0,1)*G**2)/(loop*v**2)',
+                 value = '(4*cgghh*complex(0,1)*gs**2)/(loop*v**2)',
                  order = {'QCD':2,'QL':1})
 
 GC_32 = Coupling(name = 'GC_32',
-                 value = '(4*cgghh*G**3)/(loop*v**2)',
+                 value = '(4*cgghh*gs**3)/(loop*v**2)',
                  order = {'QCD':3,'QL':1})
 
 GC_33 = Coupling(name = 'GC_33',
-                 value = '(-4*cgghh*complex(0,1)*G**4)/(loop*v**2)',
+                 value = '(-4*cgghh*complex(0,1)*gs**4)/(loop*v**2)',
                  order = {'QCD':4,'QL':1})
 
 GC_34 = Coupling(name = 'GC_34',
@@ -158,15 +158,15 @@ GC_37 = Coupling(name = 'GC_37',
                  order = {'QED':2,'QL':1})
 
 GC_38 = Coupling(name = 'GC_38',
-                 value = '(2*cgg*complex(0,1)*G**2)/(loop*v)',
+                 value = '(2*cgg*complex(0,1)*gs**2)/(loop*v)',
                  order = {'QCD':2,'QL':1})
 
 GC_39 = Coupling(name = 'GC_39',
-                 value = '(2*cgg*G**3)/(loop*v)',
+                 value = '(2*cgg*gs**3)/(loop*v)',
                  order = {'QCD':3,'QL':1})
 
 GC_40 = Coupling(name = 'GC_40',
-                 value = '(-2*cgg*complex(0,1)*G**4)/(loop*v)',
+                 value = '(-2*cgg*complex(0,1)*gs**4)/(loop*v)',
                  order = {'QCD':4,'QL':1})
 
 GC_41 = Coupling(name = 'GC_41',

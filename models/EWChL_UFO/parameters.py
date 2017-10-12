@@ -1,6 +1,6 @@
-# This file was automatically created by FeynRules 2.3.22
-# Mathematica version: 10.3.0 for Mac OS X x86 (64-bit) (October 9, 2015)
-# Date: Thu 16 Feb 2017 17:16:10
+# This file was automatically created by FeynRules 2.3.27
+# Mathematica version: 10.4.1 for Linux x86 (64-bit) (April 11, 2016)
+# Date: Thu 12 Oct 2017 11:30:44
 
 
 
@@ -17,14 +17,6 @@ ZERO = Parameter(name = 'ZERO',
                  texname = '0')
 
 # User-defined parameters.
-aEWM1 = Parameter(name = 'aEWM1',
-                  nature = 'external',
-                  type = 'real',
-                  value = 127.9,
-                  texname = '\\text{aEWM1}',
-                  lhablock = 'SMINPUTS',
-                  lhacode = [ 1 ])
-
 Gf = Parameter(name = 'Gf',
                nature = 'external',
                type = 'real',
@@ -33,11 +25,11 @@ Gf = Parameter(name = 'Gf',
                lhablock = 'SMINPUTS',
                lhacode = [ 2 ])
 
-aS = Parameter(name = 'aS',
+gs = Parameter(name = 'gs',
                nature = 'external',
                type = 'real',
-               value = 0.1184,
-               texname = '\\alpha _s',
+               value = 1.217715785,
+               texname = 'g_s',
                lhablock = 'SMINPUTS',
                lhacode = [ 3 ])
 
@@ -217,6 +209,14 @@ MZ = Parameter(name = 'MZ',
                lhablock = 'MASS',
                lhacode = [ 23 ])
 
+MW = Parameter(name = 'MW',
+               nature = 'external',
+               type = 'real',
+               value = 80.376,
+               texname = '\\text{MW}',
+               lhablock = 'MASS',
+               lhacode = [ 24 ])
+
 Me = Parameter(name = 'Me',
                nature = 'external',
                type = 'real',
@@ -321,17 +321,17 @@ Wh = Parameter(name = 'Wh',
                lhablock = 'DECAY',
                lhacode = [ 5000000 ])
 
-aEW = Parameter(name = 'aEW',
-                nature = 'internal',
-                type = 'real',
-                value = '1/aEWM1',
-                texname = '\\alpha _{\\text{EW}}')
+sw = Parameter(name = 'sw',
+               nature = 'internal',
+               type = 'real',
+               value = 'cmath.sqrt(1 - MW**2/MZ**2)',
+               texname = 's_w')
 
-G = Parameter(name = 'G',
-              nature = 'internal',
-              type = 'real',
-              value = '2*cmath.sqrt(aS)*cmath.sqrt(cmath.pi)',
-              texname = 'G')
+aS = Parameter(name = 'aS',
+               nature = 'internal',
+               type = 'real',
+               value = 'gs**2/(4.*cmath.pi)',
+               texname = '\\alpha _s')
 
 CKM1x1 = Parameter(name = 'CKM1x1',
                    nature = 'internal',
@@ -399,23 +399,17 @@ Mh = Parameter(name = 'Mh',
                value = '125.',
                texname = '\\text{Mh}')
 
-MW = Parameter(name = 'MW',
-               nature = 'internal',
-               type = 'real',
-               value = 'cmath.sqrt(MZ**2/2. + cmath.sqrt(MZ**4/4. - (aEW*cmath.pi*MZ**2)/(Gf*cmath.sqrt(2))))',
-               texname = 'M_W')
+sw2 = Parameter(name = 'sw2',
+                nature = 'internal',
+                type = 'real',
+                value = 'sw**2',
+                texname = '\\text{sw2}')
 
 ee = Parameter(name = 'ee',
                nature = 'internal',
                type = 'real',
-               value = '2*cmath.sqrt(aEW)*cmath.sqrt(cmath.pi)',
+               value = '2*2**0.25*MW*sw*cmath.sqrt(Gf)',
                texname = 'e')
-
-sw2 = Parameter(name = 'sw2',
-                nature = 'internal',
-                type = 'real',
-                value = '1 - MW**2/MZ**2',
-                texname = '\\text{sw2}')
 
 cw = Parameter(name = 'cw',
                nature = 'internal',
@@ -423,23 +417,17 @@ cw = Parameter(name = 'cw',
                value = 'cmath.sqrt(1 - sw2)',
                texname = 'c_w')
 
-sw = Parameter(name = 'sw',
-               nature = 'internal',
-               type = 'real',
-               value = 'cmath.sqrt(sw2)',
-               texname = 's_w')
-
 v = Parameter(name = 'v',
               nature = 'internal',
               type = 'real',
               value = '(2*MW*sw)/ee',
               texname = 'v')
 
-g1 = Parameter(name = 'g1',
-               nature = 'internal',
-               type = 'real',
-               value = 'ee/cw',
-               texname = 'g_1')
+aEW = Parameter(name = 'aEW',
+                nature = 'internal',
+                type = 'real',
+                value = 'ee**2/(4.*cmath.pi)',
+                texname = '\\alpha _{\\text{EW}}')
 
 gw = Parameter(name = 'gw',
                nature = 'internal',
@@ -482,6 +470,18 @@ yytau = Parameter(name = 'yytau',
                   type = 'real',
                   value = 'ymtau/v',
                   texname = 'y_{\\tau }')
+
+aEWM1 = Parameter(name = 'aEWM1',
+                  nature = 'internal',
+                  type = 'real',
+                  value = '1/aEW',
+                  texname = '\\text{aEWM1}')
+
+g1 = Parameter(name = 'g1',
+               nature = 'internal',
+               type = 'real',
+               value = 'ee/cw',
+               texname = 'g_1')
 
 yb = Parameter(name = 'yb',
                nature = 'internal',

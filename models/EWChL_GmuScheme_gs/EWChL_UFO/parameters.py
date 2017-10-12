@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.27
 # Mathematica version: 10.4.1 for Linux x86 (64-bit) (April 11, 2016)
-# Date: Thu 12 Oct 2017 11:16:25
+# Date: Thu 12 Oct 2017 11:30:44
 
 
 
@@ -25,19 +25,11 @@ Gf = Parameter(name = 'Gf',
                lhablock = 'SMINPUTS',
                lhacode = [ 2 ])
 
-aS = Parameter(name = 'aS',
+gs = Parameter(name = 'gs',
                nature = 'external',
                type = 'real',
-               value = 2,
-               texname = '\\alpha _s',
-               lhablock = 'SMINPUTS',
-               lhacode = [ 3 ])
-
-aS = Parameter(name = 'aS',
-               nature = 'external',
-               type = 'real',
-               value = 2,
-               texname = '\\alpha _s',
+               value = 1.217715785,
+               texname = 'g_s',
                lhablock = 'SMINPUTS',
                lhacode = [ 3 ])
 

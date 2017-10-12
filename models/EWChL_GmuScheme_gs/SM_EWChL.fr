@@ -586,8 +586,6 @@ M$Parameters = {
   },
   aS    == { 
     ParameterType    -> Internal,
-    BlockName        -> SMINPUTS,
-    OrderBlock       -> 3,
     Value            -> gs^2/(4*Pi), 
     InteractionOrder -> {QCD,2},
     TeX              -> Subscript[\[Alpha],s],
